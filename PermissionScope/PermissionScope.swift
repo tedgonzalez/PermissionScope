@@ -26,9 +26,9 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
     // MARK: UI Parameters
     
     /// Header UILabel with the message "Hey, listen!" by default.
-    @objc public var headerLabel                 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+    public var headerLabel                 = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
     /// Header UILabel with the message "We need a couple things\r\nbefore you get started." by default.
-    @objc public var bodyLabel                   = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 70))
+    public var bodyLabel                   = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 70))
     /// Color for the close button's text color.
     public var closeButtonTextColor        = UIColor(red: 0, green: 0.47, blue: 1, alpha: 1)
     /// Color for the permission buttons' text color.
@@ -44,7 +44,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
     /// Font used for all the UIButtons
     public var buttonFont:UIFont            = .boldSystemFont(ofSize: 14)
     /// Font used for all the UILabels
-    @objc public var labelFont:UIFont             = .systemFont(ofSize: 14)
+    public var labelFont:UIFont             = .systemFont(ofSize: 14)
     /// Close button. By default in the top right corner.
     public var closeButton                  = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 32))
     /// Offset used to position the Close button.
@@ -546,7 +546,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
     
     - returns: Permission status for the requested type.
     */
-    @objc public func statusNotifications() -> PermissionStatus {
+    public func statusNotifications() -> PermissionStatus {
         let settings = UIApplication.shared.currentUserNotificationSettings
         if let settingTypes = settings?.types , settingTypes != UIUserNotificationType() {
             return .authorized
@@ -1073,7 +1073,7 @@ typealias resultsForConfigClosure     = ([PermissionResult]) -> Void
     /**
     Hides the modal viewcontroller with an animation.
     */
-    @objc public func hide() {
+    public func hide() {
         let window = UIApplication.shared.keyWindow!
 
         DispatchQueue.main.async(execute: {

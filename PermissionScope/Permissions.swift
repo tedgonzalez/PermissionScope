@@ -29,7 +29,7 @@ import Accounts
     public let type: PermissionType = .notifications
     public let notificationCategories: Set<UIUserNotificationCategory>?
     
-    @objc public init(notificationCategories: Set<UIUserNotificationCategory>? = nil) {
+    public init(notificationCategories: Set<UIUserNotificationCategory>? = nil) {
         self.notificationCategories = notificationCategories
     }
 }
