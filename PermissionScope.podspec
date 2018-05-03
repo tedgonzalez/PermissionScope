@@ -11,6 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PermissionScope/*.swift'
-  s.swift_version = '> 3.2'
   s.requires_arc = true
 end
