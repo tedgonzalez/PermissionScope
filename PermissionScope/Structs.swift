@@ -55,7 +55,7 @@ import Foundation
 }
 
 /// Result for a permission status request.
-@objc public class PermissionResult: NSObject {
+@objcMembers public class PermissionResult: NSObject {
     public let type: PermissionType
     public let status: PermissionStatus
     
