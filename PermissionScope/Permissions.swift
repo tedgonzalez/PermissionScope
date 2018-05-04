@@ -25,7 +25,7 @@ import Accounts
     var type: PermissionType { get }
 }
 
-@objc public class NotificationsPermission: NSObject, Permission {
+@objcMembers public class NotificationsPermission: NSObject, Permission {
     public let type: PermissionType = .notifications
     public let notificationCategories: Set<UIUserNotificationCategory>?
     
